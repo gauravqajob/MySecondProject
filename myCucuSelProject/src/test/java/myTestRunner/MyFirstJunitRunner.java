@@ -6,14 +6,13 @@ package myTestRunner;
 	import io.cucumber.junit.CucumberOptions;
 
 	@RunWith(Cucumber.class)
-	@CucumberOptions(features = "D:\\eclipse-workspace2\\myCucuSelProject\\src\\test\\java\\myFeatures\\firstFeatureFile.feature", 
+	@CucumberOptions(features = "D:\\git_Project\\MySecondProject\\myCucuSelProject\\src\\test\\java\\myFeatures\\firstFeatureFile.feature", 
 		glue = { "myStepDefinitions" }, 
-		tags = "@tag1",
-		plugin = {"pretty", "html:test-output", "json:target/cucumber.json",
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}, 	
-		dryRun = false, 
+		tags = "@smoketest1",
+		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}, 	
+		dryRun = false,
 		monochrome = true,
-		publish=true
+		publish=false
 		)
 	public class MyFirstJunitRunner {
 
